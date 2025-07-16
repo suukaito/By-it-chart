@@ -1,0 +1,85 @@
+\u003C!DOCTYPE html>
+\u003Chtml lang=\"en\">
+\u003Chead>
+  \u003Cmeta charset=\"UTF-8\" />
+  \u003Cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  \u003Ctitle>Bybit Crypto Charts Dashboard\u003C/title>
+  \u003Cstyle>
+    body {
+      background-color: #0f1117;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      color: #f1f1f1;
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+    .chart-box {
+      background-color: #1e1f26;
+      padding: 8px;
+      border-radius: 8px;
+    }
+  \u003C/style>
+  \u003Cscript type=\"text/javascript\" src=\"https://s3.tradingview.com/tv.js\">\u003C/script>
+\u003C/head>
+\u003Cbody>
+  \u003Cdiv class=\"chart-grid\">
+    
+    \u003Cdiv class=\"chart-box\">
+      \u003Ch2>Bitcoin (BTC)\u003C/h2>
+      \u003Cdiv id=\"chart-btc\">\u003C/div>
+      \u003Cscript type=\"text/javascript\">
+        new TradingView.widget({
+          \"container_id\": \"chart-btc\",
+          \"symbol\": \"BYBIT:BTCUSDT\",
+          \"interval\": \"D\",
+          \"theme\": \"dark\",
+          \"style\": \"1\",
+          \"locale\": \"en\",
+          \"width\": \"100%\",
+          \"height\": 300,
+          \"hide_legend\": true,
+          \"hide_side_toolbar\": false,
+          \"allow_symbol_change\": false,
+          \"save_image\": false
+        });
+      \u003C/script>
+    \u003C/div>
+
+    \u003Cdiv class=\"chart-box\">
+      \u003Ch2>Ethereum (ETH)\u003C/h2>
+      \u003Cdiv id=\"chart-eth\">\u003C/div>
+      \u003Cscript type=\"text/javascript\">
+        new TradingView.widget({
+          \"container_id\": \"chart-eth\",
+          \"symbol\": \"BYBIT:ETHUSDT\",
+          \"interval\": \"D\",
+          \"theme\": \"dark\",
+          \"style\": \"1\",
+          \"locale\": \"en\",
+          \"width\": \"100%\",
+          \"height\": 300,
+          \"hide_legend\": true,
+          \"hide_side_toolbar\": false,
+          \"allow_symbol_change\": false,
+          \"save_image\": false
+        });
+      \u003C/script>
+    \u003C/div>
+
+    \u003C!-- 🛠️ You can add more charts like this one -->
+    \u003C!-- Just copy and paste the entire \u003Cdiv class=\"chart-box\"> block and change the symbol and title -->
+
+  \u003C/div>
+\u003C/body>
+\u003C/html>
+
